@@ -1,0 +1,579 @@
+2022-08-30 19:20:38,440 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:38,524 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:38,668 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:38,697 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:38,861 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:38,917 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:38,997 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:39,020 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:20:39,040 django.request DEBUG    Asynchronous middleware debug_toolbar.middleware.DebugToolbarMiddleware adapted.
+2022-08-30 19:23:56,459 django.security.DisallowedHost ERROR    Invalid HTTP_HOST header: '0.0.0.0'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+2022-08-30 19:23:56,493 django.request WARNING  Bad Request: /admin
+2022-08-30 19:23:56,683 django.security.DisallowedHost ERROR    Invalid HTTP_HOST header: '0.0.0.0'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+2022-08-30 19:23:56,711 django.request WARNING  Bad Request: /favicon.ico
+2022-08-30 19:24:08,064 django.request ERROR    Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'api'
+2022-08-30 19:24:08,315 django.request ERROR    Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'api'
+2022-08-30 19:24:14,070 django.request ERROR    Internal Server Error: /api
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'api'
+2022-08-30 19:24:14,343 django.request ERROR    Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'api'
+2022-08-30 19:26:40,352 django.request ERROR    Internal Server Error: /api
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from integrators import urls as integrators_urls
+ModuleNotFoundError: No module named 'integrators'
+2022-08-30 19:26:40,592 django.request ERROR    Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from integrators import urls as integrators_urls
+ModuleNotFoundError: No module named 'integrators'
+2022-08-30 19:26:41,553 django.request ERROR    Internal Server Error: /api
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from integrators import urls as integrators_urls
+ModuleNotFoundError: No module named 'integrators'
+2022-08-30 19:26:41,775 django.request ERROR    Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from integrators import urls as integrators_urls
+ModuleNotFoundError: No module named 'integrators'
+2022-08-30 19:28:22,827 django.request ERROR    Internal Server Error: /api
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from trades import urls as trades_urls
+ModuleNotFoundError: No module named 'trades'
+2022-08-30 19:28:23,001 django.request ERROR    Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from trades import urls as trades_urls
+ModuleNotFoundError: No module named 'trades'
+2022-08-30 19:28:23,535 django.request ERROR    Internal Server Error: /api
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from trades import urls as trades_urls
+ModuleNotFoundError: No module named 'trades'
+2022-08-30 19:28:23,710 django.request ERROR    Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/deprecation.py", line 125, in __call__
+    response = self.process_request(request)
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 53, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/lib/python3.10/site-packages/django/middleware/common.py", line 70, in should_redirect_with_slash
+    if not is_valid_path(request.path_info, urlconf):
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 153, in is_valid_path
+    return resolve(path, urlconf)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/base.py", line 24, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 590, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 632, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/site-packages/django/urls/resolvers.py", line 625, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/backend/urls.py", line 22, in <module>
+    path('api/', include('api.urls')),
+  File "/usr/local/lib/python3.10/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/code/api/urls.py", line 4, in <module>
+    from trades import urls as trades_urls
+ModuleNotFoundError: No module named 'trades'
+2022-08-30 19:28:32,961 asyncio      DEBUG    Using selector: EpollSelector
+2022-08-30 19:28:32,965 django.request WARNING  Not Found: /api
+2022-08-30 19:28:33,156 asyncio      DEBUG    Using selector: EpollSelector
+2022-08-30 19:28:33,159 django.request WARNING  Not Found: /favicon.ico
+2022-08-30 19:28:36,715 asyncio      DEBUG    Using selector: EpollSelector
+2022-08-30 19:28:36,741 asyncio      DEBUG    Using selector: EpollSelector
